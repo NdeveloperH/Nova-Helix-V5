@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova Helix — Your Local AI Companion</title>
+<meta name="description" content="Nova Helix is an AI companion that runs entirely on your own computer. Private by design: your conversations and memories never leave your machine.">
+<style>
+  :root{--bg:#0b0d16;--panel:#141829;--panel2:#1b2138;--text:#e8eaf6;--muted:#9aa3c0;--accent:#7c5cff;--accent2:#4ea3ff;--line:#262d4a}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  header{padding:96px 0 64px;text-align:center;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(124,92,255,.25),transparent)}
+  h1{font-size:3rem;letter-spacing:.02em;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tag{font-size:1.25rem;color:var(--muted);margin-top:12px}
+  .pill{display:inline-block;margin-top:20px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;color:var(--accent2);font-size:.95rem}
+  section{padding:48px 0}
+  h2{font-size:1.6rem;margin-bottom:20px;color:var(--text)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .card h3{color:var(--accent2);margin-bottom:8px;font-size:1.1rem}
+  .card p{color:var(--muted);font-size:.97rem}
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
+  .tier{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column}
+  .tier.featured{border-color:var(--accent)}
+  .tier h3{font-size:1.3rem}
+  .price{font-size:2.2rem;margin:10px 0;font-weight:600}
+  .price span{font-size:1rem;color:var(--muted);font-weight:400}
+  .tier ul{list-style:none;margin-top:8px;flex:1}
+  .tier li{padding:6px 0;color:var(--muted);font-size:.96rem}
+  .tier li::before{content:"◆ ";color:var(--accent);font-size:.7rem}
+  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.95rem;text-align:center}
+  footer a{color:var(--accent2);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Nova Helix</h1>
+    <p class="tag">An AI companion that lives on <em>your</em> computer — not in someone else's cloud.</p>
+    <span class="pill">100% local · Private by design · Windows</span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What is Nova Helix?</h2>
+    <div class="cards">
+      <div class="card"><h3>Runs entirely on your machine</h3><p>Nova Helix is a desktop AI assistant powered by language models running locally on your own hardware. No account required to chat, no server round-trips, no usage surveillance.</p></div>
+      <div class="card"><h3>Private by design</h3><p>Your conversations, memories, and files stay on your computer. What you tell Nova Helix is yours — it never leaves your machine.</p></div>
+      <div class="card"><h3>A companion, not a chatbox</h3><p>Nova Helix remembers what matters to you, keeps context across sessions, and shows you exactly what it's doing while it thinks, searches, and writes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Free</h3><div class="price">$0</div>
+        <ul><li>Full local chat companion</li><li>Persistent memory</li><li>Runs on standard laptops</li><li>Core themes</li></ul>
+      </div>
+      <div class="tier featured">
+        <h3>Pro</h3><div class="price">$20<span>/month</span></div>
+        <ul><li>Everything in Free</li><li>Stronger models for everyday work</li><li>Expanded theme library</li><li>For everyday users who want more</li></ul>
+      </div>
+      <div class="tier">
+        <h3>Ultra</h3><div class="price">$33<span>/month</span></div>
+        <ul><li>Everything in Pro</li><li>Flagship-class local models</li><li>Built for heavy coding &amp; large projects</li><li>Voice &amp; live desktop experiences</li><li>For power users with high-end GPUs</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Nova Helix</strong> — sold and operated by its developer.</p>
+    <p>Contact: <a href="https://github.com/NdeveloperH">github.com/NdeveloperH</a></p>
+  </div>
+</footer>
+</body>
+</html>
