@@ -8,6 +8,9 @@ No usage surveillance. What you tell Nova Helix stays on your machine.
 
 🌐 **Website:** https://ndeveloperh.github.io/Nova-Helix-V5/
 
+![Nova Helix — main chat](img/nh-chat.png)
+*The chat home: channels, your counsel of local models, live status, and an animated deep-space background — all rendered locally.*
+
 ---
 
 ## What makes it different
