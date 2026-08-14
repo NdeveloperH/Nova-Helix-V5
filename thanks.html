@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you — Nova Helix</title>
+<style>
+  :root{--bg:#0b0d16;--panel:#141829;--text:#e8eaf6;--muted:#9aa3c0;--accent:#7c5cff;--accent2:#4ea3ff;--line:#262d4a}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{max-width:620px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:48px;text-align:center}
+  h1{font-size:2.2rem;margin-bottom:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  p{color:var(--muted);margin-top:14px}
+  .steps{text-align:left;margin-top:28px;border-top:1px solid var(--line);padding-top:24px}
+  .steps h2{font-size:1rem;color:var(--text);margin-bottom:12px;letter-spacing:.04em;text-transform:uppercase}
+  .steps li{color:var(--muted);margin:10px 0 10px 20px}
+  a{color:var(--accent2);text-decoration:none}
+  .mark{font-size:3rem;line-height:1}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark">✦</div>
+    <h1>Thank you</h1>
+    <p>Your subscription is active. Welcome to Nova Helix.</p>
+    <div class="steps">
+      <h2>What happens next</h2>
+      <ol>
+        <li>Your licence key is prepared and sent to the email address you used at checkout.</li>
+        <li>Open Nova Helix, go to <strong>Settings → Models</strong>, and choose <strong>Enter licence</strong>.</li>
+        <li>Paste the licence. Your tier unlocks immediately — verification happens on your own machine, offline.</li>
+      </ol>
+      <p>You can manage or cancel your subscription any time from the link in your Stripe receipt email.</p>
+      <p>Questions? Open an issue at <a href="https://github.com/NdeveloperH/Nova-Helix-V5">github.com/NdeveloperH</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
