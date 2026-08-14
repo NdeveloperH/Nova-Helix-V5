@@ -11,6 +11,9 @@ No usage surveillance. What you tell Nova Helix stays on your machine.
 ![Nova Helix — main chat](img/nh-chat.png)
 *The chat home: channels, your counsel of local models, live status, and an animated deep-space background — all rendered locally.*
 
+![Nova Helix — a live conversation](img/nh-conversation.png)
+*A real conversation, running fully offline: honest about what it is, with the assistant's inner-monologue and observation channels alongside.*
+
 ---
 
 ## What makes it different
