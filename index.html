@@ -5,35 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nova Helix — Your Local AI Companion</title>
 <meta name="description" content="Nova Helix is an AI companion that runs entirely on your own computer. Private by design: your conversations and memories never leave your machine.">
+<link rel="canonical" href="https://ndeveloperh.github.io/Nova-Helix-V5/">
+<meta name="theme-color" content="#0b0d16">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nova Helix">
+<meta property="og:title" content="Nova Helix — Your Local AI Companion">
+<meta property="og:description" content="An AI companion that lives on your computer — not in someone else's cloud. 100% local, private by design, for Windows.">
+<meta property="og:url" content="https://ndeveloperh.github.io/Nova-Helix-V5/">
+<meta property="og:image" content="https://ndeveloperh.github.io/Nova-Helix-V5/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nova Helix — an AI companion that lives on your computer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nova Helix — Your Local AI Companion">
+<meta name="twitter:description" content="An AI companion that lives on your computer — not in someone else's cloud. 100% local, private by design, for Windows.">
+<meta name="twitter:image" content="https://ndeveloperh.github.io/Nova-Helix-V5/og.png">
 <style>
   :root{--bg:#0b0d16;--panel:#141829;--panel2:#1b2138;--text:#e8eaf6;--muted:#9aa3c0;--accent:#7c5cff;--accent2:#4ea3ff;--line:#262d4a}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent2)}
+  :focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:4px}
   .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:24px;top:16px;z-index:1;background:var(--panel2);padding:10px 16px;border-radius:8px}
   header{padding:96px 0 64px;text-align:center;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(124,92,255,.25),transparent)}
-  h1{font-size:3rem;letter-spacing:.02em;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .tag{font-size:1.25rem;color:var(--muted);margin-top:12px}
+  h1{font-size:clamp(2.2rem,9vw,3rem);letter-spacing:.02em;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tag{font-size:clamp(1.05rem,4vw,1.25rem);color:var(--muted);margin-top:12px}
   .pill{display:inline-block;margin-top:20px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;color:var(--accent2);font-size:.95rem}
   section{padding:48px 0}
   h2{font-size:1.6rem;margin-bottom:20px;color:var(--text)}
+  .lede{color:var(--muted);margin:-8px 0 24px;max-width:62ch}
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
   .card h3{color:var(--accent2);margin-bottom:8px;font-size:1.1rem}
   .card p{color:var(--muted);font-size:.97rem}
   .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
-  .tier{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column}
+  .tier{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;position:relative}
   .tier.featured{border-color:var(--accent)}
+  .tier.featured::after{content:"Most popular";position:absolute;top:-11px;left:28px;background:var(--accent);color:#fff;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px}
   .tier h3{font-size:1.3rem}
   .price{font-size:2.2rem;margin:10px 0;font-weight:600}
   .price span{font-size:1rem;color:var(--muted);font-weight:400}
   .tier ul{list-style:none;margin-top:8px;flex:1}
   .tier li{padding:6px 0;color:var(--muted);font-size:.96rem}
   .tier li::before{content:"◆ ";color:var(--accent);font-size:.7rem}
+  .note{color:var(--muted);font-size:.92rem;margin-top:18px}
   footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.95rem;text-align:center}
-  footer a{color:var(--accent2);text-decoration:none}
+  footer p+p{margin-top:8px}
+  footer a{text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="wrap">
     <h1>Nova Helix</h1>
@@ -42,20 +72,24 @@
   </div>
 </header>
 
-<section>
+<main id="main">
+<section aria-labelledby="what">
   <div class="wrap">
-    <h2>What is Nova Helix?</h2>
+    <h2 id="what">What is Nova Helix?</h2>
     <div class="cards">
       <div class="card"><h3>Runs entirely on your machine</h3><p>Nova Helix is a desktop AI assistant powered by language models running locally on your own hardware. No account required to chat, no server round-trips, no usage surveillance.</p></div>
       <div class="card"><h3>Private by design</h3><p>Your conversations, memories, and files stay on your computer. What you tell Nova Helix is yours — it never leaves your machine.</p></div>
       <div class="card"><h3>A companion, not a chatbox</h3><p>Nova Helix remembers what matters to you, keeps context across sessions, and shows you exactly what it's doing while it thinks, searches, and writes.</p></div>
+      <div class="card"><h3>It remembers you</h3><p>Persistent memory with semantic recall — it finds what matters by meaning, not just keywords. Erase it any time; erased means erased.</p></div>
+      <div class="card"><h3>Honest by design</h3><p>It tells you what it doesn't know instead of making things up, and cites its sources when it searches.</p></div>
+      <div class="card"><h3>Built for real hardware</h3><p>The Free tier runs on standard laptops. Higher tiers scale up to flagship-class local models for high-end GPUs.</p></div>
     </div>
   </div>
 </section>
 
-<section>
+<section aria-labelledby="pricing">
   <div class="wrap">
-    <h2>Pricing</h2>
+    <h2 id="pricing">Pricing</h2>
     <div class="tiers">
       <div class="tier">
         <h3>Free</h3><div class="price">$0</div>
@@ -70,12 +104,28 @@
         <ul><li>Everything in Pro</li><li>Flagship-class local models</li><li>Built for heavy coding &amp; large projects</li><li>Voice &amp; live desktop experiences</li><li>For power users with high-end GPUs</li></ul>
       </div>
     </div>
+    <p class="note">Every tier runs locally. Paid tiers unlock larger models and richer experiences — not access to a server.</p>
   </div>
 </section>
+
+<section aria-labelledby="tech">
+  <div class="wrap">
+    <h2 id="tech">Under the hood</h2>
+    <p class="lede">Nova Helix is commercial software, but here is the short version of how it is built.</p>
+    <div class="cards">
+      <div class="card"><h3>Rust + CUDA inference engine</h3><p>A custom high-performance engine, with a CPU path tuned so the Free tier genuinely runs on ordinary laptops.</p></div>
+      <div class="card"><h3>Native desktop app</h3><p>Built with Flutter for a fast, themeable desktop presence rather than a browser window in disguise.</p></div>
+      <div class="card"><h3>Offline licence verification</h3><p>Your licence works without phoning home — consistent with everything else staying on your machine.</p></div>
+      <div class="card"><h3>Signed updates</h3><p>Updates are cryptographically signed, so you can verify what you are installing.</p></div>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
   <div class="wrap">
     <p><strong>Nova Helix</strong> — sold and operated by its developer.</p>
+    <p>Questions or feedback? <a href="https://github.com/NdeveloperH/Nova-Helix-V5/issues">Open an issue</a> · <a href="https://github.com/NdeveloperH/Nova-Helix-V5">View this showcase on GitHub</a></p>
     <p>Contact: <a href="https://github.com/NdeveloperH">github.com/NdeveloperH</a></p>
   </div>
 </footer>
